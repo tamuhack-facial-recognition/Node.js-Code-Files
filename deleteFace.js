@@ -8,17 +8,16 @@ const subscriptionKey = 'fbd46b617b604099b8a85f9f17587013';
 // You must use the same location in your REST call as you used to get your
 // subscription keys. For example, if you got your subscription keys from
 // westus, replace "westcentralus" in the URL below with "westus".
-const uriBase = 'https://southcentralus.api.cognitive.microsoft.com/face/v1.0/detect';
+const uriBase = 'https://southcentralus.api.cognitive.microsoft.com/face/v1.0/largefacelists/{largeFaceListId}/persistedfaces/{persistedFaceId}';
 
 const imageUrl =
     'https://pbs.twimg.com/profile_images/1066768154368663552/GqnW1MDG_400x400.jpg';
 
 // Request parameters.
 const params = {
-    'returnFaceId': 'true',
-    'returnFaceLandmarks': 'true',
-    'returnFaceAttributes': 'age,gender,headPose,smile,facialHair,glasses,' +
-        'emotion,hair,makeup,occlusion,accessories,blur,exposure,noise'
+    'largeFaceListId': 'waterman_tamuhack2',
+    'persistedFaceId': 'REPLACE',
+    
 };
 
 const options = {
