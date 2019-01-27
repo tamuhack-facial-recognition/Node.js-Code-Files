@@ -1,7 +1,7 @@
 'use strict';
+var readlineSync = require('readline-sync');
 
 const request = require('request');
-
 // Replace <Subscription Key> with your valid subscription key.
 const subscriptionKey = 'fbd46b617b604099b8a85f9f17587013';
 
@@ -10,13 +10,16 @@ const subscriptionKey = 'fbd46b617b604099b8a85f9f17587013';
 // westus, replace "westcentralus" in the URL below with "westus".
 const uriBase = 'https://southcentralus.api.cognitive.microsoft.com/face/v1.0/largefacelists/{largeFaceListId}/persistedfaces';
 
+//user input jpg file
+var user_pic = readlineSync.question('What is the url for your picture? (.jpg file pls): ');
+
 const imageUrl =
-    'https://pbs.twimg.com/profile_images/1066768154368663552/GqnW1MDG_400x400.jpg';
+    user_pic;
 
 // Request parameters.
 const params = {
     'largeFaceListId': 'waterman_tamuhack2',
-    'userData': 'https://pbs.twimg.com/profile_images/1066768154368663552/GqnW1MDG_400x400.jpg',
+    'userData': user_pic,
     
 };
 
