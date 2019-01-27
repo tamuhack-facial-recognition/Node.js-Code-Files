@@ -16,7 +16,6 @@ const imageUrl =
 // Request parameters.
 const params = {
     'largeFaceListId': 'waterman_tamuhack2',
-    'userData': 'https://pbs.twimg.com/profile_images/1066768154368663552/GqnW1MDG_400x400.jpg',
     
 };
 
